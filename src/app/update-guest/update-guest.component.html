@@ -1,0 +1,62 @@
+<div id="mySidenav" class="sidenav">
+ 
+    
+    <a href="guests" id="guest">Guest Details</a>
+   <!-- <a href="staff" id="staff">Staff Details</a>
+    <a href="create-staff" id="addstaff">Add Staff</a>
+    <a href="room" id="room">Room Details</a>
+    <a href="create-room" id="addroom">Add Room</a>-->
+
+  </div>
+<div class="col-md-6 offset-md-3">
+    <h1> Update Guest </h1>
+    <form (ngSubmit) = "onSubmit()">
+      
+        
+        <div class="form-group">
+            <label style="color:aqua;"> Id:</label>
+            <input type="text" class ="form-control" id = "code"
+                [(ngModel)] ="guest.id" name ="code">
+        </div>
+        <div class="form-group">
+            <label style="color:aqua;"> Name:</label>
+            <input type="text" class ="form-control" id = "name"
+                [(ngModel)] ="guest.name" name ="name">
+        </div>
+       
+        <div class="form-group">
+            <label style="color:aqua;">PhoneNumber:</label>
+            <input type="text" class ="form-control" id = "phno"
+                [(ngModel)] = "guest.phno" name = "phno">
+        </div>
+
+     
+       
+        
+        <div class="form-group">
+            <label style="color:aqua;">Gender:</label>
+            <input type="text" class ="form-control" id = "gender"
+                [(ngModel)] = "guest.gender" name = "gender">
+        </div>
+        <div class="form-group">
+            <label style="color:aqua;">Email:</label>
+            <input type="text" class ="form-control" id = "email"
+                [(ngModel)] = "guest.email" name = "email">
+        </div>
+    
+        <div class="form-group">
+            <label style="color:aqua;">Company:</label>
+            <input type="text" class ="form-control" id = "company"
+                [(ngModel)] = "guest.company" name = "company">
+        </div>
+    
+        <div class="form-group">
+            <label style="color:aqua;"> Address:</label>
+            <input type="text" class ="form-control" id = "address"
+                [(ngModel)] = "guest.address" name = "address">
+        </div>
+         <hr>
+        <button style="margin-left:250px;" class = "btn btn-success" id="b1"  type ="submit">Submit</button>
+    
+    </form>
+    </div> 

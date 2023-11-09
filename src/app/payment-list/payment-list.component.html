@@ -1,0 +1,44 @@
+<div id="mySidenav" class="sidenav">
+ 
+    
+    <a href="create-payment" id="payment">Add Payment</a>
+ 
+
+  </div>
+
+      
+    <h1>Payment List</h1>
+           
+   <table class = "table table-striped">
+       <thead>
+           <tr>
+               <th> Id</th>
+               
+          
+               <th> Card_Holder_name</th>
+               <th> Card_number</th>
+               <th> Exp_date </th>
+               <th> Amount </th>
+               <th> Paytime </th>
+               <th> Actions </th>
+           </tr>
+       </thead>
+       <tbody>
+           <tr *ngFor = "let payment of payments" >
+               <td> {{ payment.id }} </td>
+            
+               <td> {{ payment.card_holder_name }} </td>
+               <td> {{ payment.card_number }} </td>
+               <td> {{ payment.exp_date}} </td>
+               <td> {{ payment.amount}} </td>
+               <td> {{ payment.pay_time}} </td>
+           
+              <td>
+                   <button (click) = "updatePayment(payment.id)" class = "btn btn-info"> Update</button>
+                   <button (click) = "deletePayment(payment.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                 
+               </td>
+           </tr>
+       </tbody>
+       
+   </table>

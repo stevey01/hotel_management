@@ -1,0 +1,41 @@
+
+<div id="mySidenav" class="sidenav">
+ 
+    
+    <a href="create-staff" id="addstaff">Add Staff</a>
+ 
+
+  </div>
+<h1> Staff List</h1>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            
+            <th> Name </th>
+          
+            <th> Address</th>
+            <th> Email </th>
+            <th> Salary </th>
+            <th> Occupation </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let staff of staffs" >
+           <td>{{staff.id}}</td>
+            <td> {{ staff.name }} </td>
+         
+            <td> {{ staff.address }} </td>
+            <td> {{ staff.email}} </td>
+            <td> {{ staff.salary}} </td>
+            <td> {{ staff.occupation}} </td>
+           
+           
+         <td>
+                <button (click) = "updateStaff(staff.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteStaff(staff.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

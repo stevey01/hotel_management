@@ -1,0 +1,58 @@
+
+
+    <div id="mySidenav" class="sidenav">
+ 
+    
+        <a href="create-room" id="room">Add Room</a>
+     
+    
+      </div>
+
+    <h1>Room List</h1>
+      
+   <table class = "table table-striped">
+    <thead>
+        <tr>
+
+            <th> Id</th>
+          
+            <th> No_of_Adults </th>
+            <th> No_of_children</th>
+            <th> Check_in_date</th>
+            <th> Check_out_date</th>
+            <th>Room_type</th>
+       
+            <th> Price </th>
+            <th> Number_of_Nights </th>
+            <th>Total_Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+      
+        <tr *ngFor = "let room of rooms" >
+            <td> {{ room.id }} </td>
+        
+            <td> {{ room.no_of_Adult}} </td>
+            <td> {{ room.no_of_child }} </td>
+            <td> {{ room.check_in_date}} </td>
+            <td> {{ room.checkout_date}} </td>
+            <td> {{ room.room_type}} </td>
+      
+            <td> {{ room.price}} </td>
+            <td> {{ room.number_of_Nights}} </td>
+            <td> {{ room.total_price}} </td>
+
+            <td>
+            <button (click) = "updateRoom(room.id)" class = "btn btn-info"> Update</button>
+            <hr style="color:gainsboro">
+            <button (click) = "deleteRoom(room.id)" class = "btn btn-danger"> Delete</button>
+            <hr style="color:gainsboro">
+                <button (click) = "IssueBill(room.id)" class = "btn btn-warning" > Issue Bill</button>
+            </td>
+        </tr>
+    </tbody>
+       
+   </table>
+   
+ 

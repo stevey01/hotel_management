@@ -1,0 +1,46 @@
+
+<div id="mySidenav" class="sidenav">
+ 
+    
+    <a href="addreserve" id="addreserve">Reserve Guest</a>
+ 
+
+  </div>
+<h1>Reservation Details</h1>
+
+<table class = "table table-striped">
+    
+    <thead>
+        <tr>
+            <th> Id</th>
+           
+            <th> No_of_Adults</th>
+            <th> No_of_children</th>
+            <th> Check_in_date</th>
+            <th> Check_out_date</th>
+            <th> Status </th>
+            <th> Number_of_Nights </th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+      
+        <tr *ngFor = "let reserve of reserves" >
+            <td> {{ reserve.id }} </td>
+        
+            <td> {{ reserve.no_of_Adult}} </td>
+            <td> {{ reserve.no_of_child }} </td>
+            <td> {{ reserve.check_in_date}} </td>
+            <td> {{ reserve.checkout_date}} </td>
+            <td> {{ reserve.status}} </td>
+            <td> {{ reserve.number_of_Nights}} </td>
+
+            <td>
+                <button (click) = "updateReserve(reserve.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteReserve(reserve.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                
+            </td>
+        </tr>
+    </tbody>
+
+</table>

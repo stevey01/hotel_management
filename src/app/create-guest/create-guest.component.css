@@ -1,0 +1,38 @@
+
+#container
+{
+background-image: url('../../assets/images/img3.jpg');
+width:1200px;
+height:1000px;
+}
+h1
+{
+    text-align:center;
+    color:aqua;
+}
+#mySidenav a {
+    position: absolute;
+    left: -80px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+  }
+  
+  #mySidenav a:hover {
+    left: 0;
+  }
+  
+  #manager {
+  
+    background-color: #04AA6D;
+  }
+  #guest
+  {
+    top: 60px;
+    background-color: #db1fc8
+  }
+  

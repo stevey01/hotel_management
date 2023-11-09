@@ -1,0 +1,111 @@
+<!--<div class="p-3 mb-2 bg-danger text-white">
+<h1>Hotel Receipt</h1>
+<hr>
+
+<section>
+<div class ="b">
+<h6>Name:</h6>{{guest.name}}
+<h6>PhoneNumber:</h6>{{guest.phno}}
+<h6>Address:</h6>{{guest.address}}
+<h6>Code:</h6>{{ room.code}} 
+<h6>Room_type:</h6>{{ room.room_type}} 
+</div>
+<div class ="a">
+    
+<h6>price:</h6>{{ room.price}}
+<h6>Check_in_date:</h6> {{ room.check_in_date}}
+<h6>Check_in_date:</h6>{{ room.checkout_date}} 
+<h6>Number_of_Nights:</h6>{{room.number_of_Nights}}
+</div>
+
+<div class="c">
+<h4>Total_Price:</h4>  <h6 >{{room.total_price}}</h6>
+</div>
+</section>
+</div>*/
+-->
+<div class="p-3 mb-2 bg-danger text-white">
+<div class="card">
+    <div class="card-header bg-black"></div>
+    <div class="card-body">
+  
+      <div class="container">
+        <div class="row">
+          <div class="col-xl-12">
+            <i class="far fa-building text-danger fa-6x float-start"></i>
+          </div>
+        </div>
+  
+        
+        <div class="row text-center">
+          <h3 class="text-uppercase text-center mt-3" style="font-size: 40px;">Hotel Receipt</h3>
+          
+        </div>
+  
+        <div class="row mx-3">
+          <table class="table">
+           
+            <tbody>
+              <tr>
+                <td>Name</td>
+                <td><i class="fas fa-dollar-sign"></i> {{guest.name}}</td>
+              </tr>
+              <tr>
+                <td>PhoneNumber</td>
+                <td><i class="fas fa-dollar-sign"></i> {{guest.phno}}</td>
+              </tr>
+              <tr>
+                <td>Address</td>
+                <td><i class="fas fa-dollar-sign"></i> {{guest.address}}</td>
+              </tr>
+              <tr>
+                <td>Id</td>
+                <td><i class="fas fa-dollar-sign"></i> {{ room.id}} </td>
+              </tr>
+              <tr>
+                <td>Room_type</td>
+                <td><i class="fas fa-dollar-sign"></i>{{ room.room_type}} </td>
+              </tr>
+              <tr>
+                <td>Room_Price</td>
+                <td><i class="fas fa-dollar-sign"></i>{{room.price}}</td>
+              </tr>
+              <tr>
+                <td>Check_in_date</td>
+                <td><i class="fas fa-dollar-sign"></i>  {{ room.check_in_date}}</td>
+              </tr>
+              <tr>
+                <td>Check_out_date</td>
+                <td><i class="fas fa-dollar-sign"></i> {{ room.checkout_date}} </td>
+              </tr>
+              <tr>
+                <td>Number_of_Nights</td>
+                <td><i class="fas fa-dollar-sign"></i>{{room.number_of_Nights}}</td>
+              </tr>
+            </tbody>
+          </table>
+  
+        <hr>
+        <div class="row">
+          <div class="col-xl-8" style="margin-left:60px">
+            <p class="float-end"
+              style="font-size: 30px; color: red; font-weight: 400;font-family: Arial, Helvetica, sans-serif;">
+              Total:
+              <span><i class="fas fa-dollar-sign"></i>{{room.total_price}}</span></p>
+          </div>
+  
+        </div>
+  
+        <div class="row mt-2 mb-5">
+       
+          <p class="fw-bold mt-3">Signature:</p>
+        </div>
+  
+      </div>
+  
+  
+  
+    </div>
+    <div class="card-footer bg-black"></div>
+  </div>
+  </div>

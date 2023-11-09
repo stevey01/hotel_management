@@ -1,0 +1,52 @@
+
+<div id="mySidenav" class="sidenav">
+ 
+  
+    <a href="staff" id="staff">Staff Details</a>
+ 
+
+  </div>
+<div class="col-md-6 offset-md-3">
+    <h1> Update Staff </h1>
+    
+    <form (ngSubmit) = "onSubmit()">
+      
+        <div class="form-group">
+            <label style="color:aqua;">Name:</label>
+            <input type="text" class ="form-control" id = "name"
+                [(ngModel)] = "staff.name" name = "name">
+        </div>
+
+
+     
+
+        <div class="form-group">
+            <label style="color:aqua;"> Address:</label>
+            <input type="text" class ="form-control" id = "address"
+            [(ngModel)] = "staff.address" name = "address">
+        </div>
+
+     
+        <div class="form-group">
+            <label style="color:aqua;">Salary:</label>
+            <input type="text" class ="form-control" id = "salary"
+                [(ngModel)] = "staff.salary" name = "salary">
+        </div>
+    
+        <div class="form-group">
+            <label style="color:aqua;">Occupation:</label>
+            <input type="text" class ="form-control" id = "occupation"
+                [(ngModel)] = "staff.occupation" name = "occupation">
+        </div>
+    
+        <div class="form-group">
+            <label style="color:aqua;"> Email:</label>
+            <input type="text" class ="form-control" id = "email"
+                [(ngModel)] = "staff.email" name = "email">
+        </div>
+       
+    <hr>
+        <button style="margin-left:250px;" class = "btn btn-success"  type ="submit">Submit</button>
+    
+    </form>
+    </div> 

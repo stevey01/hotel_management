@@ -1,0 +1,47 @@
+<div id="mySidenav" class="sidenav">
+ 
+    
+    <a href="create-guest" id="addguest">Add Guest</a>
+ 
+
+  </div>
+
+
+<div id="container1">
+      
+ <h1>Guest List</h1>
+        </div>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> Id</th>
+            <th> PhoneNumber </th>
+           
+            <th> Name</th>
+            <th> Gender</th>
+            <th> Email </th>
+            <th> Company </th>
+            <th> Address </th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let guest of guests" >
+            <td> {{ guest.id }} </td>
+            <td> {{ guest.phno }} </td>
+            
+            <td> {{ guest.name }} </td>
+            <td> {{ guest.gender}} </td>
+            <td> {{ guest.email}} </td>
+            <td> {{ guest.company}} </td>
+            <td> {{ guest.address}} </td>
+            <td>
+                <button (click) = "updateGuest(guest.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteGuest(guest.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+              
+            </td>
+        </tr>
+    </tbody>
+    
+</table>
+

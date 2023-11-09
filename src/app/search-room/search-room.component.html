@@ -1,0 +1,67 @@
+<!-- <p>trainlocation works!</p> -->
+<h1>Search Rooms</h1>
+<hr>
+<div class="container">
+    <form [formGroup]="search" (ngSubmit)="searchRooms()">
+        <div class="row">
+            <!-- Train From Field -->
+            <div class="col-md-4 mb-3">
+                <label style="color:aqua;" for="check_in_date" class="form-label"><b>Check_In_Date:</b></label>
+                <input type="date" formControlName="check_in_date" id="check_in_date" class="form-control" placeholder="Enter check_in_date" />
+                <div *ngIf="search.get('check_in_date')?.invalid && search.get('check_in_date')?.touched" class="error-message">
+                    <span *ngIf="search.get('check_in_date')?.hasError('required')">Check_In_Date is required</span>
+                <!--    <span *ngIf="search.get('check_in_date')?.hasError('minlength')">Train From should be at least 3 characters</span>
+                    <span *ngIf="search.get('check_in_date')?.hasError('maxlength')">Train From should not exceed 30 characters</span>-->
+                </div>
+            </div>
+            <!-- Train To Field -->
+            <div class="col-md-4 mb-3">
+                <label style="color:aqua;" for="checkout_date" class="form-label"><b>Check_Out_Date:</b></label>
+                <input type="date" formControlName="checkout_date" id="checkout_date" class="form-control" placeholder="Enter checkout_date" />
+                <div *ngIf="search.get('checkout_date')?.invalid && search.get('checkout_date')?.touched" class="error-message">
+                    <span *ngIf="search.get('checkout_date')?.hasError('required')">Check_Out_Date is required</span>
+                    <!--<span *ngIf="search.get('checkout_date')?.hasError('minlength')">Train To should be at least 3 characters</span>
+                    <span *ngIf="search.get('checkout_date')?.hasError('maxlength')">Train To should not exceed 30 characters</span>-->
+                </div>
+            </div>
+            <div class="col-md-4 mb-2">
+              <button mat-raised-button color="primary" type="submit">
+                <hr style="color:white;">
+                  <mat-icon>search</mat-icon> 
+              </button>
+          </div>
+        </div>
+    </form>
+  </div>
+  <hr>
+  <h1>Room List</h1>
+  <hr>
+  <div class="container1">
+      <table class = "table table-striped">
+          <thead>
+              <tr>
+      
+                  <th> Id</th> 
+                  <th> Check_in_date</th>
+                  <th> Check_out_date</th>
+                  <th>Room_type</th>
+             
+               
+              </tr>
+          </thead>
+          <tbody>
+            
+              <tr *ngFor = "let room of datasource" >
+                  <td> {{ room.id }} </td>
+                  <td> {{ room.check_in_date}} </td>
+                  <td> {{ room.checkout_date}} </td>
+                  <td> {{ room.room_type}} </td>
+            
+              </tr>
+          </tbody>
+             
+         </table>
+         
+    </div>
+    
+   

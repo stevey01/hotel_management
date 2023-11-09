@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row">
+      
+            <div class="container text-center">
+                <hr>
+                <h1>Welcome to Online Hotel Management System</h1>
+                <hr>
+                <img src="../assets/images/img10" width="200px" height="200px" alt="">
+                <hr>
+            </div>
+            <h1 class="text-center">Login</h1>
+            <form #userForm="ngForm" (ngSubmit)="login()">
+                <div class="form-group">
+                    <label style="color:aqua;" for="">Email:</label>
+                    <input type="text"  required #email="ngModel" 
+                    [class.is-invalid]="email.invalid && email.touched" class="form-control" name="username" [(ngModel)]="user1.email">
+                     <small class="text-danger" [class.d-none]="email.valid || email.untouched" >Email is required</small>
+                </div>
+                <div class="form-group">
+                    <label style="color:aqua;" for="">Password:</label>
+                    <input type="password" required #password="ngModel" 
+                    [class.is-invalid]="password.invalid && password.touched" class="form-control" name="password" [(ngModel)]="user1.password">
+                     <small class="text-danger" [class.d-none]="password.valid || password.untouched" >Password is required</small>
+                     
+                </div>
+               
+                <div class="text-center mt-3">
+                    <button [disabled]="userForm.form.invalid" class="btn btn-primary" type="submit">Login</button>
+                   
+                  </div> 
+                
+            </form>
+        </div>
+    </div>
+

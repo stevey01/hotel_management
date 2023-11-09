@@ -1,0 +1,56 @@
+
+<div id="mySidenav" class="sidenav">
+ 
+  
+    <a href="payment" id="payment">Payment Details</a>
+ 
+
+  </div>
+<div class="col-md-6 offset-md-3">
+    <h1> Add Payment </h1>
+    <form (ngSubmit) = "onSubmit()">
+      
+       
+        
+        <div class="form-group">
+            <label style="color:aqua;">Id:</label>
+            <input type="text" class ="form-control" id = "code"
+                [(ngModel)] = "payment.id" name = "code">
+        </div>
+
+        <div class="form-group">
+            <label style="color:aqua;"> Card_Holder_Name:</label>
+            <input type="text" class ="form-control" id = "card_holder_name"
+                [(ngModel)] ="payment.card_holder_name" name ="card_holder_name">
+        </div>
+       
+        <div class="form-group">
+            <label style="color:aqua;"> Card_Number:</label>
+            <input type="text" class ="form-control" id = "card_number"
+                [(ngModel)] ="payment.card_number" name ="card_number">
+        </div>
+        
+        <div class="form-group">
+            <label style="color:aqua;">Exp_date:</label>
+            <input type="text" class ="form-control" id = "exp_date"
+                [(ngModel)] = "payment.exp_date" name = "exp_date">
+        </div>
+        <div class="form-group">
+            <label style="color:aqua;">Amount:</label>
+            <input type="text" class ="form-control" id = "amount"
+                [(ngModel)] = "payment.amount" name = "amount">
+        </div>
+    
+        <div class="form-group">
+            <label style="color:aqua;">Paytime:</label>
+            <input type="text" class ="form-control" id = "paytime"
+                [(ngModel)] = "payment.pay_time" name = "company">
+        </div>
+        <hr>
+        <button style="margin-left:250px;" class = "btn btn-success"  type ="submit">Submit</button>
+    </form>
+  
+   
+    
+    </div> 
+
